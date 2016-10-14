@@ -16,7 +16,6 @@ begin
   
 
   9.times do |i|
-    puts i
     i.even? ? current_player = [player_1.name, player_1_choice] : current_player = [player_2.name, player_2_choice]
     puts current_player[0] + " Where would you like to go? 1-9"
     player_spot = gets.chomp
@@ -33,11 +32,12 @@ begin
       choice = gets.chomp
       if choice == "yes"
         break
-      elsif i == 9
-        puts "It's a tie!"
       else
         exit 0
       end
+    elsif i == 8
+      puts "It's a tie! Play again?  yes/no"
+      choice = gets.chomp
     end
 
   end
