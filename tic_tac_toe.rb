@@ -14,7 +14,6 @@ begin
   puts player_1.name + " is " + player_1_choice
   puts player_2.name + " is " + player_2_choice + "\n\n"
   
-
   9.times do |i|
     i.even? ? current_player = [player_1.name, player_1_choice] : current_player = [player_2.name, player_2_choice]
     puts current_player[0] + " Where would you like to go? 1-9"
@@ -39,9 +38,7 @@ begin
       puts "It's a tie! Play again?  yes/no"
       choice = gets.chomp
     end
-
   end
-  
 end until choice == "no"
 
 
